@@ -5,8 +5,18 @@ html, body {
     height: 100%;
     background: #ECF0F3;
   }
+  .hero {
+    background-color: indigo;
+  }
+  .breadcrumb {
+      color: indigo;
+  }
+  .button {
+      color: white;
+      background-color: indigo;
+  }
   nav.navbar {
-    border-top: 4px solid #276cda;
+    border-top: 4px solid indigo;
     margin-bottom: 1rem;
   }
   .navbar-item.brand-text {
@@ -22,7 +32,7 @@ html, body {
     margin-left: 0;
   }
   .menu-label {
-    color: #8F99A3;
+    color: #0F1D38;
     letter-spacing: 1.3;
     font-weight: 700;
   }
@@ -33,11 +43,11 @@ html, body {
   }
   .menu-list a:hover {
     background-color: transparent;
-    color: #276cda;
+    color:indigo;
   }
   .menu-list a.is-active {
     background-color: transparent;
-    color: #276cda;
+    color: indigo;
     font-weight: 700;
   }
   .card {
@@ -45,7 +55,7 @@ html, body {
     margin-bottom: 2rem;
   }
   .card-header-title {
-    color: #8F99A3;
+    color: indigo;
     font-weight: 400;
   }
   .info-tiles {
@@ -53,12 +63,12 @@ html, body {
   }
   .info-tiles .subtitle {
     font-weight: 300;
-    color: #8F99A3;
+    color: indigo;
   }
   .hero.welcome.is-info {
-    background: #36D1DC;
-    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
-    background: linear-gradient(to right, #5B86E5, #36D1DC);
+    background: indigo;
+    background: -webkit-linear-gradient(to right, indigo, indigo);
+    background: linear-gradient(to right, indigo, indigo);
   }
   .hero.welcome .title, .hero.welcome .subtitle {
     color: hsl(192, 17%, 99%);
@@ -70,8 +80,6 @@ html, body {
     font-size: 14px;
     font-weight: 700;
     color: #8F99A3;
-  }
-  .card-footer-item:hover {
   }
   .card-table .table {
     margin-bottom: 0;
