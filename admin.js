@@ -31,6 +31,7 @@ function victoryOrDefeat() {
         return alert("Victory");
     }
 }
+
 gatherOre.onClick = function () {
     ore = ore + 1000;
     document.querySelectorAll(".title")[1].innerText = parseString(ore);
