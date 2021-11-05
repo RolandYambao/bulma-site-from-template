@@ -11,6 +11,14 @@ html, body {
   .breadcrumb {
       color: indigo;
   }
+  #searchOre {
+    color: white;
+    background-color: indigo;
+  }
+  #searchAttack {
+    color: white;
+    background-color: indigo;
+  }
   .button {
       color: white;
       background-color: indigo;
