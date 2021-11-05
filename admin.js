@@ -223,7 +223,7 @@ edictOfAnnihilation.addEventListener('click', function () {
     if (ore >= 1000) {
         ore = 0;
     } else {
-        return alert("Not Enough Ore")
+        return alert("Not Enough Ore (You need at Least 1000)")
     }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
