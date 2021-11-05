@@ -85,7 +85,7 @@ cannonFodder.addEventListener('click', function () {
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 10;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
-    yourPoints = yourPoints - Math.floor(Math.random() * 10) + 1;
+    yourPoints = yourPoints - Math.floor(Math.random() * 5) + 1;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
@@ -98,7 +98,7 @@ blindOverseers.addEventListener('click', function () {
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 25;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
-    yourPoints = yourPoints - Math.floor(Math.random() * 25) + 1;
+    yourPoints = yourPoints - Math.floor(Math.random() * 10) + 1;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
@@ -111,7 +111,7 @@ eviserators.addEventListener('click', function () {
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 45;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
-    yourPoints = yourPoints - Math.floor(Math.random() * 45) + 1;
+    yourPoints = yourPoints - Math.floor(Math.random() * 20) + 1;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
@@ -124,7 +124,7 @@ masterminds.addEventListener('click', function () {
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 60;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
-    yourPoints = yourPoints - Math.floor(Math.random() * 60) + 1;
+    yourPoints = yourPoints - Math.floor(Math.random() * 30) + 1;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
@@ -137,7 +137,7 @@ adjudicators.addEventListener('click', function () {
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 80;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
-    yourPoints = yourPoints - Math.floor(Math.random() * 100) + 1;
+    yourPoints = yourPoints - Math.floor(Math.random() * 40) + 1;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
@@ -150,7 +150,7 @@ enslavers.addEventListener('click', function () {
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 250;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
-    yourPoints = yourPoints - Math.floor(Math.random() * 500) + 1;
+    yourPoints = yourPoints - Math.floor(Math.random() * 125) + 1;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
@@ -163,7 +163,7 @@ subjugators.addEventListener('click', function () {
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 500;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
-    yourPoints = yourPoints - Math.floor(Math.random() * 1000) + 1;
+    yourPoints = yourPoints - Math.floor(Math.random() * 250) + 1;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     returnvictoryOrDefeat();
 })
@@ -172,7 +172,7 @@ ferventDespoilation.addEventListener('click', function () {
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     enemyPoints = enemyPoints - 50;
     document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
-    yourPoints = yourPoints - Math.floor(Math.random() * 250) + 1;
+    yourPoints = yourPoints - Math.floor(Math.random() * 100) + 1;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
@@ -191,7 +191,7 @@ spiritOfOblivion.addEventListener('click', function () {
     enemyPoints = enemyPoints - 250;
     document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
-    yourPoints = yourPoints - Math.floor(Math.random() * 250) + 1;
+    yourPoints = yourPoints - Math.floor(Math.random() * 100) + 1;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
