@@ -40,7 +40,11 @@ gatherOre.addEventListener('click', function () {
     victoryOrDefeat();
 })
 cannonFodder.addEventListener('click', function () {
-    ore = ore - 10;
+    if (ore >= 10) {
+        ore = ore - 10;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 10;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
@@ -49,7 +53,11 @@ cannonFodder.addEventListener('click', function () {
     victoryOrDefeat();
 })
 blindOverseers.addEventListener('click', function () {
-    ore = ore - 30;
+    if (ore >= 30) {
+        ore = ore - 30;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 25;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
@@ -58,7 +66,11 @@ blindOverseers.addEventListener('click', function () {
     victoryOrDefeat();
 })
 eviserators.addEventListener('click', function () {
-    ore = ore - 50;
+    if (ore >= 50) {
+        ore = ore - 50;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 45;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
@@ -67,7 +79,11 @@ eviserators.addEventListener('click', function () {
     victoryOrDefeat();
 })
 masterminds.addEventListener('click', function () {
-    ore = ore - 75;
+    if (ore >= 75) {
+        ore = ore - 75;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 60;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
@@ -76,7 +92,11 @@ masterminds.addEventListener('click', function () {
     victoryOrDefeat();
 })
 adjudicators.addEventListener('click', function () {
-    ore = ore - 100;
+    if (ore >= 100) {
+        ore = ore - 100;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 80;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
@@ -85,7 +105,11 @@ adjudicators.addEventListener('click', function () {
     victoryOrDefeat();
 })
 enslavers.addEventListener('click', function () {
-    ore = ore - 500;
+    if (ore >= 500) {
+        ore = ore - 500;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 250;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
@@ -94,13 +118,17 @@ enslavers.addEventListener('click', function () {
     victoryOrDefeat();
 })
 subjugators.addEventListener('click', function () {
-    ore = ore - 1000;
+    if (ore >= 1000) {
+        ore = ore - 1000;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 500;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
-    victoryOrDefeat();
+    returnvictoryOrDefeat();
 })
 ferventDespoilation.addEventListener('click', function () {
     ore = ore + 250;
@@ -112,31 +140,55 @@ ferventDespoilation.addEventListener('click', function () {
     victoryOrDefeat();
 })
 spiritOfOblivion.addEventListener('click', function () {
-    ore = ore - 250;
+    if (attackPower >= 250) {
+        attackPower = attackPower - 250;
+    } else {
+        return alert("Not Enough Attack Power")
+    }
+    if (ore >= 250) {
+        ore = ore - 250;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     enemyPoints = enemyPoints - 250;
     document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
-    attackPower = attackPower - 250;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
 marchOfTyranny.addEventListener('click', function () {
-    ore = ore - 500;
+    if (attackPower > 0) {
+        attackPower = attackPower * 0.5;
+    } else {
+        return alert("Not Enough Attack Power")
+    }
+    if (ore >= 500) {
+        ore = ore - 500;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
     enemyPoints = enemyPoints - (attackPower * 0.5);
     document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
-    attackPower = attackPower * 0.5;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
     document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
 })
 edictOfAnnihilation.addEventListener('click', function () {
-    ore = 0;
+    if (attackPower > 0) {
+        enemyPoints = enemyPoints - attackPower;
+    } else {
+        return alert("Not Enough Attack Power")
+    }
+    if (ore >= 0) {
+        ore = 0;
+    } else {
+        return alert("Not Enough Ore")
+    }
     document.querySelectorAll(".title")[1].innerText = ore.toString();
-    enemyPoints = enemyPoints - attackPower;
     document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
     attackPower = 0;
     document.querySelectorAll(".title")[2].innerText = attackPower.toString();
