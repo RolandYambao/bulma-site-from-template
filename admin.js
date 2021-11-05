@@ -220,7 +220,7 @@ edictOfAnnihilation.addEventListener('click', function () {
     } else {
         return alert("Not Enough Attack Power")
     }
-    if (ore >= 0) {
+    if (ore >= 1000) {
         ore = 0;
     } else {
         return alert("Not Enough Ore")
