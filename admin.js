@@ -32,18 +32,18 @@ function victoryOrDefeat() {
 searchOre.addEventListener('click', function () {
     if (inputOre.value > 0 && inputOre.value != null && inputOre.value <= 2000) {
         let randomChance = Math.floor(Math.random() * 10) + 1;
-        if (randomChance >= 7) {
+        if (randomChance >= 5) {
             ore = ore + parseInt(inputOre.value);
             document.querySelectorAll(".title")[1].innerText = ore.toString();
             yourPoints = yourPoints - Math.floor(Math.random() * 500) + 1;
             document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
             victoryOrDefeat();
-            return alert("You found Ore [Rolled: " + randomChance + "/10] (You need 7+)");
+            return alert("You found Ore [Rolled: " + randomChance + "/10] (You need 5+)");
         } else {
             yourPoints = yourPoints - Math.floor(Math.random() * 500) + 1;
             document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
             victoryOrDefeat();
-            return alert("You failed to find Ore [Rolled: " + randomChance + "/10] (You need 7+)");
+            return alert("You failed to find Ore [Rolled: " + randomChance + "/10] (You need 5+)");
         }
     } else {
         return alert("You can only Search for between 1-2000 Ore");
