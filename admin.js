@@ -2,7 +2,7 @@ let ore = parseInt(document.querySelectorAll(".title")[1].innerText);
 let attackPower = parseInt(document.querySelectorAll(".title")[2].innerText);
 let yourPoints = parseInt(document.querySelectorAll(".title")[3].innerText);
 let enemyPoints = parseInt(document.querySelectorAll(".title")[4].innerText);
-let enemyAttack = Math.floor(Math.random() * 1000) + 1;
+let enemyAttack = Math.floor(Math.random() * 200) + 1;
 let gatherOre = document.querySelectorAll(".button")[0];
 let cannonFodder = document.querySelectorAll(".button")[1];
 let blindOverseers = document.querySelectorAll(".button")[2];
@@ -24,123 +24,123 @@ console.log(enemyPoints);
 
 
 function victoryOrDefeat() {
-    if (yourPoints == "0") {
+    if (yourPoints <= 0) {
         return alert("Defeat");
     }
-    if (enemyPoints == "0") {
+    if (enemyPoints <= 0) {
         return alert("Victory");
     }
 }
 
-gatherOre.onClick = function () {
+gatherOre.addEventListener('click', function () {
     ore = ore + 1000;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-cannonFodder.onClick = function () {
+})
+cannonFodder.addEventListener('click', function () {
     ore = ore - 10;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 10;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-blindOverseers.onClick = function () {
+})
+blindOverseers.addEventListener('click', function () {
     ore = ore - 30;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 25;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-eviserators.onClick = function () {
+})
+eviserators.addEventListener('click', function () {
     ore = ore - 50;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 45;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-masterminds.onClick = function () {
+})
+masterminds.addEventListener('click', function () {
     ore = ore - 75;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 60;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-adjudicators.onClick = function () {
+})
+adjudicators.addEventListener('click', function () {
     ore = ore - 100;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 80;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-enslavers.onClick = function () {
+})
+enslavers.addEventListener('click', function () {
     ore = ore - 500;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 250;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-subjugators.onClick = function () {
+})
+subjugators.addEventListener('click', function () {
     ore = ore - 1000;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     attackPower = attackPower + 500;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-ferventDespoilation.onClick = function () {
+})
+ferventDespoilation.addEventListener('click', function () {
     ore = ore + 250;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     enemyPoints = enemyPoints - 50;
-    document.querySelectorAll(".title")[4].innerText = parseString(enemyPoints);
+    document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-spiritOfOblivion.onClick = function () {
+})
+spiritOfOblivion.addEventListener('click', function () {
     ore = ore - 250;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     enemyPoints = enemyPoints - 250;
-    document.querySelectorAll(".title")[4].innerText = parseString(enemyPoints);
+    document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
     attackPower = attackPower - 250;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-marchOfTyranny.onClick = function () {
+})
+marchOfTyranny.addEventListener('click', function () {
     ore = ore - 500;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
-    enemyPoints = enemyPoints - (attackPower*0.5);
-    document.querySelectorAll(".title")[4].innerText = parseString(enemyPoints);
-    attackPower = attackPower*0.5;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
+    enemyPoints = enemyPoints - (attackPower * 0.5);
+    document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
+    attackPower = attackPower * 0.5;
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
-edictOfAnnihilation.onClick = function () {
+})
+edictOfAnnihilation.addEventListener('click', function () {
     ore = 0;
-    document.querySelectorAll(".title")[1].innerText = parseString(ore);
+    document.querySelectorAll(".title")[1].innerText = ore.toString();
     enemyPoints = enemyPoints - attackPower;
-    document.querySelectorAll(".title")[4].innerText = parseString(enemyPoints);
+    document.querySelectorAll(".title")[4].innerText = enemyPoints.toString();
     attackPower = 0;
-    document.querySelectorAll(".title")[2].innerText = parseString(attackPower);
+    document.querySelectorAll(".title")[2].innerText = attackPower.toString();
     yourPoints = yourPoints - enemyAttack;
-    document.querySelectorAll(".title")[3].innerText = parseString(yourPoints);
+    document.querySelectorAll(".title")[3].innerText = yourPoints.toString();
     victoryOrDefeat();
-}
+});
