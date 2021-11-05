@@ -35,7 +35,7 @@ function victoryOrDefeat() {
     }
 }
 searchOre.addEventListener('click', function () {
-    if (inputOre.value > 0 && inputOre.value != null && inputOre.value <= 5000) {
+    if (inputOre.value > 0 && inputOre.value != null && inputOre.value <= 2000) {
         let randomChance = Math.floor(Math.random() * 10) + 1;
         if (randomChance >= 5) {
             ore = ore + parseInt(inputOre.value);
@@ -51,11 +51,11 @@ searchOre.addEventListener('click', function () {
             return alert("You failed to find Ore [Rolled: " + randomChance + "]");
         }
     } else {
-        return alert("You can only Search for between 1-5000 Ore");
+        return alert("You can only Search for between 1-2000 Ore");
     }
 })
 searchAttack.addEventListener('click', function () {
-    if (inputAttack.value > 0 && inputAttack.value != null && inputAttack.value <= 5000) {
+    if (inputAttack.value > 0 && inputAttack.value != null && inputAttack.value <= 2000) {
         let randomChance = Math.floor(Math.random() * 10) + 1;
         if (randomChance >= 5) {
             attackPower = attackPower + parseInt(inputAttack.value);
@@ -71,7 +71,7 @@ searchAttack.addEventListener('click', function () {
             return alert("You failed to find Attack Power [Rolled: " + randomChance + "]");
         }
     } else {
-        return alert("You can only Search for between 1-5000 Ore");
+        return alert("You can only Search for between 1-2000 Ore");
     }
 })
 gatherOre.addEventListener('click', function () {
