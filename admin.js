@@ -19,13 +19,6 @@ let spiritOfOblivion = document.querySelectorAll(".button")[9];
 let marchOfTyranny = document.querySelectorAll(".button")[10];
 let edictOfAnnihilation = document.querySelectorAll(".button")[11];
 
-
-console.log(ore);
-console.log(attackPower);
-console.log(yourPoints);
-console.log(enemyPoints);
-
-
 function victoryOrDefeat() {
     if (yourPoints <= 0) {
         return alert("Defeat");
